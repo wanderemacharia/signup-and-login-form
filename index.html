@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <div class="form-box">
-            <h1>Sign Up</h1>
+            <h1 id="title">Sign Up</h1>
             <form>
                 <div class="input-group">
-                    <div class="input-field">
+                    <div class="input-field" id="nameField">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" placeholder="Name">
                     </div>    
@@ -30,11 +30,22 @@
                     <p> Lost Password? <a href="#">Click Here!</a></p>  
                 </div>
                 <div class="btn-field">
-                    <button type="button">Sign Up</button>
-                    <button type="button">Log In</button>
+                    <button type="button"id="signupbtn" >Sign Up</button>
+                    <button type="button" id="loginbtn" class="disable">Log In</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn")
+        let loginbtn = document.getElementById("loginbtn")
+        let nameField = document.getElementById("nameField")
+        let title = document.getElementById("title")
+
+        loginbtn.onclick = function (){
+            nameField.style.maxHeight = "0"
+        }
+    </script>
 </body>
 </html>
