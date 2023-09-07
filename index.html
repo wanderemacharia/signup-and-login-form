@@ -45,6 +45,15 @@
 
         loginbtn.onclick = function (){
             nameField.style.maxHeight = "0"
+            title.innerHTML = "Log In"
+            signupbtn.classList.add("disable")
+            loginbtn.classList.remove("disable")
+        }
+        signupbtn.onclick = function (){
+            nameField.style.maxHeight = "65px"
+            title.innerHTML = "Sign Up"
+            loginbtn.classList.add("disable")
+            signupbtn.classList.remove("disable")
         }
     </script>
 </body>
